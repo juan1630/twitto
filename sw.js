@@ -1,4 +1,4 @@
-importScripts('./js/sw-utils.js');
+importScripts('js/sw-utils.js');
 
 
 const STATIC_CACHE_NAME = 'static-v2';
