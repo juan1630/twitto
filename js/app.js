@@ -1,7 +1,12 @@
-//service worker
+// obtenemos toda la url
+var url = window.location.href;
+var serviceWorkerLocation = '/twitto/sw.js';
+ //service worker
 if( navigator.serviceWorker ){
-    
-    navigator.serviceWorker.register( '/sw.js' );
+    if( url.includes('localhost') ) {
+        serviceWorkerLocation = "/sw.js"
+    }
+    navigator.serviceWorker.register(serviceWorkerLocation );
 } 
 
 // Referencias de jQuery

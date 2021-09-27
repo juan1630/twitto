@@ -6,7 +6,7 @@ const INMUTABLE_CACHE_NAME = 'inmutable-v1';
 
 // agregamos los assets al app shell
 const APP_SHELL = [
-    '/',
+    // '/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',
@@ -18,7 +18,7 @@ const APP_SHELL = [
     '/js/app.js',
     "css/animate.css",
     "js/libs/jquery.js",
-    '/js/sw-utils.js'
+    'js/sw-utils.js'
 ];
 
 
