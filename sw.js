@@ -27,6 +27,8 @@ const APP_SHELL_INMUTABLE = [
     'https://fonts.googleapis.com/css?family=Quicksand:300,400',
     'https://fonts.googleapis.com/css?family=Lato:400,300',
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css",
+    'css/animate.css',
+    'js/libs/jquery.js'
 ]
 
 
@@ -37,12 +39,10 @@ self.addEventListener('install', e => {
 
 
     // Grabamos el cache statico
-    const cache_static = caches.open(STATIC_CACHE_NAME)
-    .then( cache => cache.addAll(APP_SHELL));
+    const cache_static = caches.open(STATIC_CACHE_NAME).then( cache => cache.addAll(APP_SHELL));
 
     // grabamos el cache inmutable
-    const cache_inmutable = caches.open(INMUTABLE_CACHE_NAME)
-    .then( cache => cache.addAll(APP_SHELL_INMUTABLE));
+    const cache_inmutable = caches.open(INMUTABLE_CACHE_NAME).then( cache => cache.addAll(APP_SHELL_INMUTABLE));
 
     e.waitUntil(  Promise.all([cache_static, cache_inmutable] ));
 
